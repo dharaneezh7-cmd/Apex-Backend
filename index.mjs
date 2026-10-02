@@ -1,6 +1,6 @@
 import express from 'express'
 import { configDotenv } from 'dotenv';
-
+import { db } from './src/config/db.mjs';
 
 //=============DOTENV=============
 configDotenv();
@@ -12,9 +12,9 @@ const app = express();
 //Variables
 const port = process.env.PORT; 
 
+await db();
 
 //APIs
-
 app.get("/api/health",(req,res)=>
 {
     res.send(

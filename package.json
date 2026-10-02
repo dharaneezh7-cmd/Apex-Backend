@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.mjs",
-    "start" :"node index.mjs"
+    "start": "node index.mjs"
   },
   "keywords": [],
   "type": "module",
@@ -14,6 +14,7 @@
     "dotenv": "^18.0.5",
     "express": "^5.2.1",
     "express-router": "^0.0.1",
-    "init": "^0.1.2"
+    "init": "^0.1.2",
+    "mongoose": "^9.10.3"
   }
 }
