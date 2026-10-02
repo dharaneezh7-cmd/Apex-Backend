@@ -1,0 +1,15 @@
+{
+  "name": "apex-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon index.mjs"
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "init": "^0.1.2"
+  }
+}
