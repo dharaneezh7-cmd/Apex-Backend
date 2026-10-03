@@ -1,6 +1,7 @@
 import express from 'express'
 import { configDotenv } from 'dotenv';
 import { db } from './src/config/db.mjs';
+import productrouter from './src/router/product.mjs';
 
 //=============DOTENV=============
 configDotenv();
@@ -13,6 +14,12 @@ const app = express();
 const port = process.env.PORT; 
 
 await db();
+
+
+app.use(express.json());
+
+
+app.use("/api",productrouter)
 
 //APIs
 app.get("/api/health",(req,res)=>
