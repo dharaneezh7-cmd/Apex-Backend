@@ -1,5 +1,6 @@
 import express from 'express'
 import { configDotenv } from 'dotenv';
+import cors from 'cors'
 import { db } from './src/config/db.mjs';
 import productrouter from './src/router/product.mjs';
 
@@ -9,6 +10,10 @@ configDotenv();
 //Express app initialization
 const app = express();
 
+//Cors policy
+app.use(cors({
+    origin: "http://localhost:5173"
+}));
 
 //Variables
 const port = process.env.PORT; 
